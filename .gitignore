@@ -1,0 +1,8 @@
+node_modules/
+.check/
+.server.log
+shell/bin/
+shell/lib/
+shell/payload.zip
+dist/
+*.WebView2/
