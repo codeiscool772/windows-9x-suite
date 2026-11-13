@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Calculator</title>
+<link rel="stylesheet" href="../../chrome/win95.css">
+<link rel="stylesheet" href="calc.css">
+</head>
+<body>
+<div class="window">
+  <div class="titlebar" id="titlebar">
+    <div class="tb-icon" aria-hidden="true">
+      <svg viewBox="0 0 16 16" width="16" height="16" shape-rendering="crispEdges">
+        <rect x="3" y="1" width="10" height="14" fill="#c0c0c0" stroke="#000"/>
+        <rect x="4" y="2" width="8" height="3" fill="#fff" stroke="#000"/>
+        <rect x="9" y="3" width="2" height="1" fill="#000"/>
+        <rect x="4" y="6" width="2" height="2" fill="#808080" stroke="#000"/>
+        <rect x="7" y="6" width="2" height="2" fill="#808080" stroke="#000"/>
+        <rect x="10" y="6" width="2" height="2" fill="#808080" stroke="#000"/>
+        <rect x="4" y="9" width="2" height="2" fill="#808080" stroke="#000"/>
+        <rect x="7" y="9" width="2" height="2" fill="#808080" stroke="#000"/>
+        <rect x="10" y="9" width="2" height="2" fill="#808080" stroke="#000"/>
+        <rect x="4" y="12" width="2" height="2" fill="#808080" stroke="#000"/>
+        <rect x="7" y="12" width="2" height="2" fill="#808080" stroke="#000"/>
+        <rect x="10" y="12" width="2" height="2" fill="#ff0000" stroke="#000"/>
+      </svg>
+    </div>
+    <div class="tb-title" id="tbTitle">Calculator</div>
+    <div class="tb-buttons">
+      <button class="tb-btn" id="btnMin" title="Minimize" tabindex="-1">
+        <svg viewBox="0 0 9 8" width="9" height="8" shape-rendering="crispEdges"><rect x="2" y="5" width="5" height="2" fill="#000"/></svg>
+      </button>
+      <button class="tb-btn" id="btnMax" title="Maximize" tabindex="-1">
+        <svg viewBox="0 0 9 8" width="9" height="8" shape-rendering="crispEdges"><rect x="2" y="1" width="5" height="2" fill="#000"/><rect x="2" y="3" width="1" height="4" fill="#000"/><rect x="6" y="3" width="1" height="4" fill="#000"/><rect x="3" y="6" width="3" height="1" fill="#000"/></svg>
+      </button>
+      <button class="tb-btn tb-close" id="btnClose" title="Close" tabindex="-1">
+        <svg viewBox="0 0 9 8" width="9" height="8" shape-rendering="crispEdges"><g fill="#000"><rect x="1" y="1" width="2" height="1"/><rect x="2" y="2" width="2" height="1"/><rect x="3" y="3" width="2" height="1"/><rect x="4" y="4" width="2" height="1"/><rect x="5" y="5" width="2" height="1"/><rect x="5" y="1" width="2" height="1"/><rect x="4" y="2" width="2" height="1"/><rect x="2" y="4" width="2" height="1"/><rect x="1" y="5" width="2" height="1"/></g></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="menubar" id="menubar"></div>
+
+  <div class="calc">
+    <div class="display">
+      <div class="mem" id="mem">M</div>
+      <div class="value" id="value">0.</div>
+    </div>
+
+    <div class="keys" id="keys">
+      <button class="key wide k8" data-key="back" tabindex="-1">Backspace</button>
+      <button class="key op k6" data-key="ce" tabindex="-1">CE</button>
+      <button class="key op k6" data-key="c" tabindex="-1">C</button>
+
+      <button class="key op k5" data-key="mc" tabindex="-1">MC</button>
+      <button class="key op k5" data-key="mr" tabindex="-1">MR</button>
+      <button class="key op k5" data-key="ms" tabindex="-1">MS</button>
+      <button class="key op k5" data-key="m+" tabindex="-1">M+</button>
+
+      <button class="key k4" data-key="7" tabindex="-1">7</button>
+      <button class="key k4" data-key="8" tabindex="-1">8</button>
+      <button class="key k4" data-key="9" tabindex="-1">9</button>
+      <button class="key op k4" data-key="/" tabindex="-1">/</button>
+      <button class="key fun k4" data-key="sqrt" tabindex="-1">sqrt</button>
+
+      <button class="key k4" data-key="4" tabindex="-1">4</button>
+      <button class="key k4" data-key="5" tabindex="-1">5</button>
+      <button class="key k4" data-key="6" tabindex="-1">6</button>
+      <button class="key op k4" data-key="*" tabindex="-1">*</button>
+      <button class="key fun k4" data-key="percent" tabindex="-1">%</button>
+
+      <button class="key k4" data-key="1" tabindex="-1">1</button>
+      <button class="key k4" data-key="2" tabindex="-1">2</button>
+      <button class="key k4" data-key="3" tabindex="-1">3</button>
+      <button class="key op k4" data-key="-" tabindex="-1">-</button>
+      <button class="key fun k4" data-key="recip" tabindex="-1">1/x</button>
+
+      <button class="key k8" data-key="0" tabindex="-1">0</button>
+      <button class="key k3" data-key="sign" tabindex="-1">+/-</button>
+      <button class="key k3" data-key="." tabindex="-1">.</button>
+      <button class="key op k3" data-key="+" tabindex="-1">+</button>
+      <button class="key op k3" data-key="=" tabindex="-1">=</button>
+    </div>
+  </div>
+</div>
+<script type="module" src="calc.js"></script>
+</body>
+</html>

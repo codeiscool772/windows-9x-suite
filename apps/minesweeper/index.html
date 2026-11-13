@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Minesweeper</title>
+<link rel="stylesheet" href="../../chrome/win95.css">
+<link rel="stylesheet" href="minesweeper.css">
+</head>
+<body>
+<div class="window">
+  <div class="titlebar" id="titlebar">
+    <div class="tb-icon" aria-hidden="true">
+      <svg viewBox="0 0 16 16" width="16" height="16" shape-rendering="crispEdges">
+        <g stroke="#000" stroke-width="1"><path d="M8 1v3M8 12v3M1 8h3M12 8h3M3 3l2 2M11 11l2 2M3 13l2-2M11 5l2-2"/></g>
+        <circle cx="8" cy="8" r="4" fill="#000"/>
+        <rect x="6" y="6" width="1" height="1" fill="#fff"/>
+      </svg>
+    </div>
+    <div class="tb-title" id="tbTitle">Minesweeper</div>
+    <div class="tb-buttons">
+      <button class="tb-btn" id="btnMin" title="Minimize" tabindex="-1">
+        <svg viewBox="0 0 9 8" width="9" height="8" shape-rendering="crispEdges"><rect x="2" y="5" width="5" height="2" fill="#000"/></svg>
+      </button>
+      <button class="tb-btn" id="btnMax" title="Maximize" tabindex="-1">
+        <svg viewBox="0 0 9 8" width="9" height="8" shape-rendering="crispEdges"><rect x="2" y="1" width="5" height="2" fill="#000"/><rect x="2" y="3" width="1" height="4" fill="#000"/><rect x="6" y="3" width="1" height="4" fill="#000"/><rect x="3" y="6" width="3" height="1" fill="#000"/></svg>
+      </button>
+      <button class="tb-btn tb-close" id="btnClose" title="Close" tabindex="-1">
+        <svg viewBox="0 0 9 8" width="9" height="8" shape-rendering="crispEdges"><g fill="#000"><rect x="1" y="1" width="2" height="1"/><rect x="2" y="2" width="2" height="1"/><rect x="3" y="3" width="2" height="1"/><rect x="4" y="4" width="2" height="1"/><rect x="5" y="5" width="2" height="1"/><rect x="5" y="1" width="2" height="1"/><rect x="4" y="2" width="2" height="1"/><rect x="2" y="4" width="2" height="1"/><rect x="1" y="5" width="2" height="1"/></g></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="menubar" id="menubar"></div>
+
+  <div class="game" id="game">
+    <div class="frame" id="frame">
+      <div class="header">
+        <div class="led" id="mines"></div>
+        <button class="face" id="face" title="New game" tabindex="-1"></button>
+        <div class="led" id="timer"></div>
+      </div>
+      <div class="board" id="field"></div>
+    </div>
+  </div>
+</div>
+<script type="module" src="minesweeper.js"></script>
+</body>
+</html>

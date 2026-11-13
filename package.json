@@ -1,0 +1,15 @@
+{
+  "name": "win9x-suite",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A suite of re-created classic Windows applications (Paint, Notepad, Calculator, Minesweeper) with a Program Manager launcher",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node tools/check.mjs",
+    "check:notepad": "node tools/notepad-check.mjs",
+    "check:calc": "node tools/calc-check.mjs",
+    "check:minesweeper": "node tools/minesweeper-check.mjs",
+    "package": "node tools/package.mjs"
+  }
+}
